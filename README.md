@@ -10,7 +10,7 @@ but **deliberately inverts its purpose**: from *personal advantage* to *public d
 
 **Definition of shipped:** Adopted by a pilot office and used to improve a constituent outcome / fulfill a duty, with guardrails verified by an independent ethics reviewer.
 
-This is an **Elyos** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Platform: https://github.com/jdev1977/elyos
+This is an **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Platform: https://github.com/jdev1977/hee-lee-oss
 
 ## Planning
 - [PROPOSAL.md](./PROPOSAL.md) — why this qualifies as a good deed (Good Deed Definition)
@@ -20,14 +20,14 @@ This is an **Elyos** good-deed project. Contributors pull a task, do it with the
 
 ## Contribute
 ```bash
-elyos browse
-elyos pull --task-file tasks/public-official-guide-guardrails-001.json --repo Elyos-Projects/public-official-guide
+hee-lee-oss browse
+hee-lee-oss pull --task-file tasks/public-official-guide-guardrails-001.json --repo Hee-Lee-Oss-Projects/public-official-guide
 # do the work with your own agent, then:
-elyos submit public-official-guide-guardrails-001 --repo Elyos-Projects/public-official-guide
+hee-lee-oss submit public-official-guide-guardrails-001 --repo Hee-Lee-Oss-Projects/public-official-guide
 ```
 
 ## Licensing & review
 - **Licensing:** Code: AGPL-3.0. Civic content: CC-BY-4.0.
 - **Review:** risk tier **high** — deeds are *delivered, not merged*; **credentialed expert (ethics/legal) sign-off is required before merge**.
 
-> Status: this project is in **planning** and not yet ratified through Elyos governance; no adopting partner/requestor is secured yet (`verifiedNeed: false` on delivery-dependent tasks).
+> Status: this project is in **planning** and not yet ratified through Hee-Lee Oss governance; no adopting partner/requestor is secured yet (`verifiedNeed: false` on delivery-dependent tasks).

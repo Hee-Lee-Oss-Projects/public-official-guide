@@ -259,7 +259,7 @@ vs MIT — open question)**; civic content **CC-BY-4.0**.
 **Key decisions**
 
 - Guardrails are a first-class, tested subsystem and a release gate — not documentation.
-- Agent-neutral core; any Anthropic/Claude specifics sit behind the LLM client (mirrors Elyos's
+- Agent-neutral core; any Anthropic/Claude specifics sit behind the LLM client (mirrors Hee-Lee Oss's
   core/adapter rule).
 - Depth-first on one jurisdiction with expert sign-off before any breadth.
 - Privacy by construction: constituent data model has no political fields to misuse in the first
@@ -305,7 +305,7 @@ is **encrypted at rest (AES-256-GCM)**; every row is tenant-scoped to an office/
 **data-retention policy** with automatic minimization and a **constituent/official deletion path**
 is required before any real PII is stored. Constituent data is **never** used for political
 targeting, surveillance, training, or any non-service purpose — enforced by the guardrail layer and
-the schema. No secrets, tokens, or PII are written to logs, receipts, or committed files (Elyos
+the schema. No secrets, tokens, or PII are written to logs, receipts, or committed files (Hee-Lee Oss
 rule).
 
 **Resolving the PII-minimization vs. records-law collision.** Privacy minimization and public
@@ -419,7 +419,7 @@ reviewer; M5 blocks on a secured pilot office.
 ## Work breakdown
 
 The itemized, schema-mapped backlog lives in **`TASKS.md`**: ~21 tasks across milestones M0–M6 plus
-a future backlog, each mapped to the Elyos Task JSON schema, with per-task acceptance criteria for
+a future backlog, each mapped to the Hee-Lee Oss Task JSON schema, with per-task acceptance criteria for
 the most important items, milestone Definitions of Done, and a complete example Task JSON for the
 first M0 task (the guardrail policy spec). The first build item in TASKS.md is the guardrail / public-
 duty policy specification, reflecting its status as a hard product requirement; an early
@@ -446,7 +446,7 @@ sequenced so HIGH-tier content investment is gated on both a chosen corpus and a
   did not review. **Disagreement fallback (sole expert vs. maintainer):** the expert holds a **veto
   on whether HIGH-tier content is legally/ethically safe to ship** — a maintainer cannot override a
   "do not ship" on substance. If the maintainer disagrees, the content **does not ship**; the
-  disagreement is logged and escalated to **Elyos governance / a second credentialed reviewer** for a
+  disagreement is logged and escalated to **Hee-Lee Oss governance / a second credentialed reviewer** for a
   tie-break, and where a single reviewer is a single point of failure the project prefers securing a
   **second expert** before relying on contested content.
 - **Steward (last-mile owner): TO BE SECURED** — owns the pilot relationship and the
@@ -454,7 +454,7 @@ sequenced so HIGH-tier content investment is gated on both a chosen corpus and a
 - **Partner / requestor: TO BE SECURED** — the pilot office/official or sponsoring civic
   organization (municipal league, clerks' association, good-government NGO, or public-administration
   program).
-- **Community / board:** edge-cases and the AGPL-vs-MIT license decision go through Elyos governance.
+- **Community / board:** edge-cases and the AGPL-vs-MIT license decision go through Hee-Lee Oss governance.
 
 ---
 
@@ -467,8 +467,8 @@ sequenced so HIGH-tier content investment is gated on both a chosen corpus and a
   schedules) — each with verified reuse terms and recorded provenance.
 - **Upstream/reference:** the Ofelia app (`C:\code\Ofelia`) as the architectural basis to adapt and
   invert; public-domain legal corpora (e.g., Public.Resource.Org) for sourcing.
-- **Elyos pieces:** `packages/schema` (Task JSON), `CLAUDE.md` work rules + refusal guardrails,
-  `docs/good-deed-definition.md` (risk tiers), Elyos governance for license/edge-case decisions.
+- **Hee-Lee Oss pieces:** `packages/schema` (Task JSON), `CLAUDE.md` work rules + refusal guardrails,
+  `docs/good-deed-definition.md` (risk tiers), Hee-Lee Oss governance for license/edge-case decisions.
 - **Human/decision dependencies (critical path):** the **pilot-jurisdiction decision (made in M0,
   gates M2–M6)** — it fixes the source corpus, source-reuse legality, and the reviewer profile; a
   secured credentialed expert reviewer (blocks M2 content); and a secured pilot office/steward
@@ -523,7 +523,7 @@ control). Multi-tenant isolation — every row scoped by office/official, enforc
 tested. AES-256-GCM encryption at rest for sensitive content; encryption key never committed.
 Clerk-based auth with least privilege. **PII minimization by schema** (no political/profiling
 fields) plus retention limits and a deletion path. Output screening blocks partisan/targeting/
-evasion leakage. **No secrets, tokens, or PII in logs, receipts, or committed files** (Elyos rule);
+evasion leakage. **No secrets, tokens, or PII in logs, receipts, or committed files** (Hee-Lee Oss rule);
 guardrail logs record refusal reasons/flags, not the sensitive content. Prompt-injection resistance:
 the policy layer is enforced server-side and cannot be overridden by user/document content; the
 red-team suite includes injection attempts. Dependency and secret scanning in CI.
@@ -554,7 +554,7 @@ red-team suite is maintained as living tests and expanded as new misuse vectors 
 ## Open questions
 
 - **Code license: AGPL-3.0 vs MIT?** AGPL protects an open civic commons from closed re-hosting;
-  MIT maximizes reuse/adoption. Needs an Elyos governance decision. (Content: CC-BY-4.0.)
+  MIT maximizes reuse/adoption. Needs a Hee-Lee Oss governance decision. (Content: CC-BY-4.0.)
 - **Which pilot jurisdiction / office type first? — decided in M0, not deferred,** because it gates
   M2–M6 (content corpus, source-reuse legality, reviewer profile). Explicit **selection criteria**,
   scored before M1 content work: (1) the jurisdiction's statutes/regulations are reusable under the
@@ -582,11 +582,11 @@ red-team suite is maintained as living tests and expanded as new misuse vectors 
 ## References
 
 - Proposal: `governance/proposals/public-official-guide.md`
-- Elyos work rules & refusal guardrails: `CLAUDE.md`
+- Hee-Lee Oss work rules & refusal guardrails: `CLAUDE.md`
 - Good-deed definition & risk tiers: `docs/good-deed-definition.md`
 - Task JSON schema: `packages/schema/src/schemas.ts`
 - Architectural basis (to adapt + invert): Ofelia app at `C:\code\Ofelia`
   (`src/lib/faculties/*`, `src/lib/imprint/*`, `src/lib/guardrails`, `prisma/schema.prisma`,
   `scripts/eval-leverage.ts`)
-- Sibling Elyos plan for house style: `planning/projects/beacon-game/{PLAN,TASKS}.md`
+- Sibling Hee-Lee Oss plan for house style: `planning/projects/beacon-game/{PLAN,TASKS}.md`
 - Edict-of-government doctrine (source reuse): *Georgia v. Public.Resource.Org* (U.S. 2020)

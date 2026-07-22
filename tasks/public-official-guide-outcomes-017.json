@@ -16,7 +16,7 @@
   "deliverable": "pr",
   "tokenEstimate": "medium",
   "status": "open",
-  "context": "Elyos measures outcomes, not vanity metrics. Public-Official-Guide tracks constituent-impact outcomes: cases moved to resolution, duty/compliance improvements (e.g., a flagged COI disclosed, a records-retention gap fixed). Outcome data is linked to casework records and logged with the official's confirmation. The outcome dashboard surfaces cases resolved and duty/compliance improvements -- not DAU or session counts. This closes the beneficiary loop that makes the deed real.",
+  "context": "Hee-Lee Oss measures outcomes, not vanity metrics. Public-Official-Guide tracks constituent-impact outcomes: cases moved to resolution, duty/compliance improvements (e.g., a flagged COI disclosed, a records-retention gap fixed). Outcome data is linked to casework records and logged with the official's confirmation. The outcome dashboard surfaces cases resolved and duty/compliance improvements -- not DAU or session counts. This closes the beneficiary loop that makes the deed real.",
   "objective": "Implement constituent-impact outcome tracking that links casework records to outcomes (cases resolved, duty/compliance improvements) with official confirmation, and surfaces an outcome dashboard (not engagement metrics).",
   "acceptanceCriteria": [
     "Tracks outcomes linked to casework cases: issue resolved, duty compliance improvement (e.g., COI disclosed, retention gap fixed), or unresolved with reason",

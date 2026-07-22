@@ -290,7 +290,7 @@ authoritative knowledge exists but is fragmented and passive. That seam is the o
    actually support this claim?" to attack the 17–33% hallucination problem head-on.
 
 (Model selection/pricing/caching per the Claude API skill; all calls behind the provider-neutral LLM
-client per Elyos core/adapter rules. Prompt-cache the `PUBLIC_DUTY_SYSTEM` charter + jurisdiction
+client per Hee-Lee Oss core/adapter rules. Prompt-cache the `PUBLIC_DUTY_SYSTEM` charter + jurisdiction
 corpus; pin model versions and re-run the red-team gate on any model upgrade.)
 
 **Where Claude must NOT decide (hard boundaries — enforced + tested):**
@@ -361,7 +361,7 @@ corpus; pin model versions and re-run the red-team gate on any model upgrade.)
   ICMA-style program — packaged "first 90 days in office" duty walkthrough.
 
 **Perpendicular (reusable infrastructure / multipliers):**
-- **`@elyos/guardrails` — a standalone public-duty / non-partisan guardrail library.** The most
+- **`@hee-lee-oss/guardrails` — a standalone public-duty / non-partisan guardrail library.** The most
   reusable artifact: a fail-closed intent-classifier + independent output-screen + red-team harness,
   publishable for *any* civic AI tool that must refuse partisan/evasion/surveillance misuse. This is
   potentially bigger than the app.
