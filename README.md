@@ -10,7 +10,7 @@ but **deliberately inverts its purpose**: from *personal advantage* to *public d
 
 **Definition of shipped:** Adopted by a pilot office and used to improve a constituent outcome / fulfill a duty, with guardrails verified by an independent ethics reviewer.
 
-This is an **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Platform: https://github.com/jdev1977/hee-lee-oss
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
 
 ## Planning
 - [PROPOSAL.md](./PROPOSAL.md) — why this qualifies as a good deed (Good Deed Definition)
