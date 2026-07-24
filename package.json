@@ -1,0 +1,23 @@
+{
+  "name": "public-official-guide-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Multi-tenant AI guide for public officials",
+  "scripts": {
+    "lint": "pnpm -r --parallel run lint",
+    "build": "pnpm -r --parallel run build",
+    "test": "pnpm -r --parallel run test",
+    "dev": "pnpm -r --parallel run dev"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=9.0.0"
+  }
+}
