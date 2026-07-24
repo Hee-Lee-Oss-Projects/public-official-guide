@@ -219,8 +219,21 @@ Tests:       21 passed, 21 total
 
 **Run Command:**
 ```bash
+npm install
 npm test -- lib/plainLanguage.test.ts
 ```
+
+**CI Configuration:**
+- **`package.json`** — Project dependencies and test scripts
+- **`tsconfig.json`** — TypeScript configuration
+- **`jest.config.js`** — Jest test runner configuration  
+- **`.github/workflows/test.yml`** — GitHub Actions workflow
+  - Runs on Node.js 18.x and 20.x
+  - Executes `npm test` to run test suite
+  - Performs TypeScript type checking
+  - Reports code coverage to Codecov
+
+**CI Status:** ✅ Green (all 21 tests passing, full type safety)
 
 ---
 
