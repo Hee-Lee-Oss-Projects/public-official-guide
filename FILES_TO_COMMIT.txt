@@ -1,0 +1,26 @@
+== Files to Commit for Plain-Language Mode Feature ==
+
+Core Implementation:
+  lib/plainLanguage.ts (224 lines)
+  lib/plainLanguage.test.ts (241 lines)
+  lib/PlainLanguageToggle.tsx (180 lines)
+
+Documentation:
+  docs/PLAIN_LANGUAGE_MODE.md (300+ lines)
+  IMPLEMENTATION_GUIDE.md (400+ lines)
+
+Examples:
+  examples/plain-language-demo.tsx (200+ lines)
+
+Status:
+  DELIVERABLE_SUMMARY.md (Verification of all acceptance criteria)
+  FILES_TO_COMMIT.txt (This file)
+
+Commit Message:
+  See commit-message.txt
+
+Branch: hee-lee-oss/public-official-guide-accessibility-027
+Target: Hee-Lee-Oss-Projects/public-official-guide (main branch)
+
+After committing, run:
+  hee-lee-oss submit public-official-guide-accessibility-027
