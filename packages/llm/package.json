@@ -1,0 +1,25 @@
+{
+  "name": "@public-official-guide/llm",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "echo 'No linter configured for llm'",
+    "dev": "echo 'LLM is a library'"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": "^0.24.0"
+  }
+}

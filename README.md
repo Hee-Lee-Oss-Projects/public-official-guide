@@ -1,33 +1,119 @@
-# public-official-guide
+# Public Official Guide
 
-> Non-partisan AI guide helping public officials fulfill duties, serve constituents, and govern ethically.  ·  **Risk tier:** high  ·  **Status:** proposed (planning)
+A non-partisan, open-source AI guide helping public and elected officials understand and fulfill
+their statutory duties, serve constituents well, and govern ethically and transparently.
 
-An open, **non-partisan** AI guide that helps public and elected officials do their job
-optimally — understand and fulfill their statutory duties, serve constituents well, and govern
-ethically and transparently. It reuses the architecture of the Ofelia app (a private long-horizon
-memory layer + specialized AI "faculties" + calibrated predictions + outcome tracking + briefings)
-but **deliberately inverts its purpose**: from *personal advantage* to *public duty*.
+## Quick Start (Local Development)
 
-**Definition of shipped:** Adopted by a pilot office and used to improve a constituent outcome / fulfill a duty, with guardrails verified by an independent ethics reviewer.
+### Prerequisites
 
-This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
+- Node.js 20.11+ (LTS)
+- pnpm 9.0+
+- PostgreSQL 15+
+- Docker (optional, for postgres)
 
-## Planning
-- [PROPOSAL.md](./PROPOSAL.md) — why this qualifies as a good deed (Good Deed Definition)
-- [PLAN.md](./PLAN.md) — architecture, roadmap & milestones, risks
-- [TASKS.md](./TASKS.md) — the full task backlog
-- [tasks/](./tasks/) — ready-to-pull task JSON(s)
+### Setup
 
-## Contribute
+1. **Clone the repository**
+
+   ```bash
+   git clone <repo-url>
+   cd public-official-guide
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Set up environment variables**
+
+   Copy `.env.example` files to `.env.local` in each workspace:
+
+   ```bash
+   # Root
+   cp .env.example .env.local
+
+   # Database schema
+   cp packages/schema/.env.example packages/schema/.env.local
+
+   # Web app
+   cp apps/web/.env.example apps/web/.env.local
+   ```
+
+   Edit `.env.local` files and fill in your actual values:
+   - **DATABASE_URL**: PostgreSQL connection string
+   - **Clerk keys**: From [clerk.com](https://clerk.com)
+   - **ANTHROPIC_API_KEY**: From [console.anthropic.com](https://console.anthropic.com)
+
+4. **Run database migrations**
+
+   ```bash
+   pnpm --filter=@public-official-guide/schema migrate
+   ```
+
+5. **Start development server**
+
+   ```bash
+   pnpm dev
+   ```
+
+   Opens http://localhost:3000 by default.
+
+## Architecture
+
+### Workspaces
+
+- **`apps/web`** — Next.js 15 App Router frontend with Clerk auth
+- **`packages/schema`** — Prisma data model and PostgreSQL client
+- **`packages/llm`** — Provider-neutral LLM client (Anthropic adapter)
+
+### Key Design
+
+- **Multi-tenant**: Every data row is scoped to a tenant via tenant ID
+- **Agent-neutral core**: Claude-specific code lives only in `packages/llm/src/anthropic-adapter.ts`
+- **TypeScript + ESM**: Strict mode throughout; ES2022 target
+
+## Development
+
+### Lint
+
 ```bash
-hee-lee-oss browse
-hee-lee-oss pull --task-file tasks/public-official-guide-guardrails-001.json --repo Hee-Lee-Oss-Projects/public-official-guide
-# do the work with your own agent, then:
-hee-lee-oss submit public-official-guide-guardrails-001 --repo Hee-Lee-Oss-Projects/public-official-guide
+pnpm lint
 ```
 
-## Licensing & review
-- **Licensing:** Code: AGPL-3.0. Civic content: CC-BY-4.0.
-- **Review:** risk tier **high** — deeds are *delivered, not merged*; **credentialed expert (ethics/legal) sign-off is required before merge**.
+### Build
 
-> Status: this project is in **planning** and not yet ratified through Hee-Lee Oss governance; no adopting partner/requestor is secured yet (`verifiedNeed: false` on delivery-dependent tasks).
+```bash
+pnpm build
+```
+
+### Test
+
+```bash
+pnpm test
+```
+
+### Database
+
+Reset schema:
+
+```bash
+pnpm --filter=@public-official-guide/schema migrate reset
+```
+
+Generate Prisma client after schema changes:
+
+```bash
+pnpm --filter=@public-official-guide/schema generate
+```
+
+## License
+
+Code: MIT-or-AGPL-3.0-TBD  
+Civic content: CC-BY-4.0
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) (TBD).
