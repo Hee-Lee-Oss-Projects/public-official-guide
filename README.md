@@ -10,7 +10,7 @@ but **deliberately inverts its purpose**: from *personal advantage* to *public d
 
 **Definition of shipped:** Adopted by a pilot office and used to improve a constituent outcome / fulfill a duty, with guardrails verified by an independent ethics reviewer.
 
-This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/HeeLeeOss/hee-lee-oss-downloads
 
 ## Planning
 - [PROPOSAL.md](./PROPOSAL.md) — why this qualifies as a good deed (Good Deed Definition)
@@ -21,9 +21,9 @@ This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it wit
 ## Contribute
 ```bash
 hee-lee-oss browse
-hee-lee-oss pull --task-file tasks/public-official-guide-guardrails-001.json --repo Hee-Lee-Oss-Projects/public-official-guide
+hee-lee-oss pull --task-file tasks/public-official-guide-guardrails-001.json --repo HeeLeeOss/public-official-guide
 # do the work with your own agent, then:
-hee-lee-oss submit public-official-guide-guardrails-001 --repo Hee-Lee-Oss-Projects/public-official-guide
+hee-lee-oss submit public-official-guide-guardrails-001 --repo HeeLeeOss/public-official-guide
 ```
 
 ## Licensing & review
